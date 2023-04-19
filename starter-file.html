@@ -7,64 +7,67 @@
      7. In the new index.html, call each function with values you added in the external .js file and output the results using console.log()
    -->
 
-	 <!DOCTYPE html>
-	 <html>
-		 <head>
-			 <meta charset="utf-8">
-			 <meta name="viewport" content="width=device-width">
-			 <title>All Star Engineering - To Refactor</title>
-		 </head>
-		 <body>
-		 <script>
-			 function add(value1, value2) {
-				 return value1 +  ' plus ' + value2 + ' = ' + value1 + value2
-			 }
-		 </script>
+<!DOCTYPE html>
+<html lang="en">
 
-		 <script>
-			 function subtract(value1, value2) {
-				 return value1 +  ' minus ' + value2 + ' = ' + value1 - value2
-			 }
-		 </script>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>All Star Engineering - To Refactor</title>
+</head>
 
-		 <script>
-				 function divide(value1, value2) {
-					 return value1 +  ' divided by ' + value2 + ' = ' + value1 / value2
-				 }
-		 </script>
+<body>
+	<script>
+		function add(value1, value2) {
+			return value1 + ' plus ' + value2 + ' = ' + value1 + value2
+		}
+	</script>
 
-		 <script>
-				 function multiply(value1, value2) {
-					 return value1 +  ' multiplied ' + value2 + ' = ' + value1 * value2
-				 }
-		 </script>
+	<script>
+		function subtract(value1, value2) {
+			return value1 + ' minus ' + value2 + ' = ' + value1 - value2
+		}
+	</script>
 
-		 <script>
-			 alert(add(14,15))
-			 alert(divide(100,20))
-			 alert(subtract(25,4))
-			 alert(multiply(19,3))
-		 </script>
+	<script>
+		function divide(value1, value2) {
+			return value1 + ' divided by ' + value2 + ' = ' + value1 / value2
+		}
+	</script>
 
-		 </body>
-	 <!--script to return formatted current date-->
-	 <script>
-	 let now = new Date();
+	<script>
+		function multiply(value1, value2) {
+			return value1 + ' multiplied ' + value2 + ' = ' + value1 * value2
+		}
+	</script>
 
-	 let days = new Array('Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday');
+	<script>
+		alert(add(14, 15))
+		alert(divide(100, 20))
+		alert(subtract(25, 4))
+		alert(multiply(19, 3))
+	</script>
 
-	 let months = new Array('January','February','March','April','May','June','July','August','September','October','November','December');
+</body>
+<!--script to return formatted current date-->
+<script>
+	let now = new Date();
 
-	 let date = ((now.getDate()<10) ? "0" : "")+ now.getDate();
+	let days = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday');
 
-	 function getFourDigits(number)	{
-		 return (number < 1000) ? number + 1900 : number;
-									 }
-	 today =  days[now.getDay()] + ", " +
-						months[now.getMonth()] + " " +
-						date + ", " +
-						(getFourDigits(now.getYear())) ;
+	let months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December');
 
-	 alert(today);
-	 </script>
-	 </html>
+	let date = ((now.getDate() < 10) ? "0" : "") + now.getDate();
+
+	function getFourDigits(number) {
+		return (number < 1000) ? number + 1900 : number;
+	}
+	today = days[now.getDay()] + ", " +
+		months[now.getMonth()] + " " +
+		date + ", " +
+		(getFourDigits(now.getYear()));
+
+	alert(today);
+</script>
+
+</html>
